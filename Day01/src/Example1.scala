@@ -6,6 +6,11 @@ object Example1 {
     args.foreach(a=>println(a))
    }
    
+   def function2(args:Array[String]):Int = {
+     args.length
+   }
+   
+   
   def main(args: Array[String]): Unit = {
 		  println("Hello World")
 		  //Arrays are immutable
@@ -14,6 +19,7 @@ object Example1 {
 		  arr1(1) = "Prabhu"
 		  println(arr1(0))  
 		  function1(arr1)
+		  println(function2(arr1))
 		  println("***************")
 		  var arr2 = Array("A","B","C")
 		  arr2.foreach(a=>println(a))
