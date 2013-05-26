@@ -12,6 +12,8 @@ object ImmutableMap {
 		  var set1 = Set("C#","Ruby")
 		  set1 = set1 + "Scala"
 		  println(set1)
+		  //class Person {}
+		  //object Person {}
   }
 
 }
