@@ -4,6 +4,12 @@ object Example2 {
     arr.foreach(i=>println(i))//Closure-based approach
   }
   def main(args: Array[String]): Unit = {
+    
+		  1 to 10 foreach(i=>println(i))
+		  var n:Int = 10
+		  (1 to n).foreach(i=>println(i)) //Range operator
+		  
+		  
 		  println("Day 02")
 		  var arr1:Array[Int] = Array(1,2,3,4,41)
 		  printFn1(arr1)
