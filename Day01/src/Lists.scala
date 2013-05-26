@@ -3,8 +3,8 @@ object Lists {
 	//create a function that will give you a list of even numbers 
     //The function will accept a list of numbers as argument
   def evenList2(list: List[Int]):List[Int] = {
-    var listtemp:List[Int] = List()
-    list foreach(i=>if(i%2 == 0) listtemp = listtemp :+ i )
+   var listtemp:List[Int] = List()
+   list foreach(i=>if(i%2 == 0) listtemp = listtemp :+ i )
    listtemp
  }
   
