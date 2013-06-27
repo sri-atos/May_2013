@@ -29,14 +29,28 @@ object Closures {
   	result
   }
   
+  //Curried closure 
+  def sumAnother(limit:Int)(code:Int=>Int):Unit = {
+    var result:Int = 0
+    for(i<-1 to limit){
+      result += code(i)
+    }
+    println(result)
+  } 
+   
   def main(args: Array[String]): Unit = {
+    
+    sumAnother(100) {i=>i}
+    sumAnother(100) {i=>if(i%2 == 0)i else 0}
+    
+    
     def calc = new Calculator(100,200)
     println(calc.operate((a,b)=>a+b))
     println(calc.operate((a,b)=>a*b))
     println(calc.operate((a,b)=>a-b))
     println(calc.operate((a,b)=>a/b))
-    
-    
+
+    calc.operate2() {(a,b)=>a+b}
     
     println("******************************")
 	println(sum(100,i=>i))	  
@@ -51,7 +65,12 @@ object Closures {
 	 arr(3) = "Groovy"
 	   
      arr.foreach(i=>println(i))
-     
+     arr.foreach ({i=>println(i)})
+     arr foreach {i=>println(i)}
+
+    
+    
+    
      var hw = {println("Hello World");println("Bye");}
 	 hw
 	 
