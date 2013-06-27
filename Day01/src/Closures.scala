@@ -11,6 +11,7 @@ object Closures {
     result
   }
   
+  
   def sumEven(limit:Int):Int = {
     var result:Int = 0
     for(i<-1 to limit){
@@ -29,12 +30,19 @@ object Closures {
   }
   
   def main(args: Array[String]): Unit = {
+    def calc = new Calculator(100,200)
+    println(calc.operate((a,b)=>a+b))
+    println(calc.operate((a,b)=>a*b))
+    println(calc.operate((a,b)=>a-b))
+    println(calc.operate((a,b)=>a/b))
+    
+    
+    
+    println("******************************")
 	println(sum(100,i=>i))	  
     println(sum(100,i=>if(i%2 == 0) i else 0))
     println(sum(100,i=>if(i%2 != 0) i else 0))
     println(sum(100,i=>i*i))
-    
-    
     
     var arr = new Array[String](4)
 	 arr(0) = "Java"
